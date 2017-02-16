@@ -84,7 +84,7 @@ Scala is a general-purpose programming language that runs on the JVM. It has ful
 Designed to be concise, many of Scala's design decisions were inspired by criticism of Java's shortcomings.
 
 ### GO
-[GO](https://golang.org/) language version 1.8.0 is installed by official OSX package.  
+[GO](https://golang.org/) language version 1.7.5 is installed by official OSX package.  
 GO focuses on simplicity by intentionally lacking features considered redundant (an approach i am a fan of). It tries to address verbosity by using type inference, duck typing and a dry syntax.  
 At the same time GO takes a straight approach to parallelism, coming with built in [CSP](https://en.wikipedia.org/wiki/Communicating_sequential_processes) and green threads (goroutines).  
 
