@@ -14,6 +14,7 @@
   * [GO](#go)
   * [Scala](#scala)
   * [Crystal](#crystal)
+  * [ASP.NET Core](#aspnet-core-11)
 * [Benchmarks](#benchmarks)
   * [Platform](#platform)
   * [Wrk](#wrk)
@@ -29,12 +30,13 @@
   * [GO ServeMux](#go-servemux)
   * [Colossus](#colossus)
   * [Crystal HTTP](#crystal-http)
+  * [ASP.NET Core](#aspnet-core-setup)
 
 ## Scope
 The idea behind this repository is to test how HTTP libraries for different languages behave under heavy loading.   
 
 ### Hello World
-The "application" i tested is barely minimal: it is the HTTP version of the "Hello World" example.
+The "application" I tested is barely minimal: it is the HTTP version of the "Hello World" example.
 
 ## Languages
 I chose to test the following languages/runtime:
@@ -92,6 +94,10 @@ At the same time GO takes a straight approach to parallelism, coming with built 
 [Crystal](http://crystal-lang.org/) 0.21.1 is installed via homebrew.  
 Crystal has a syntax very close to Ruby, but brings some desirable features such as strong typing (hidden by a pretty smart type inference algorithm) and ahead of time compilation.  
 For concurrency Crystal adopts the CSP model (like GO) and evented/IO to avoid blocking calls, but parallelism is not yet supported.
+
+### ASP.NET Core 1.1
+[ASP.NET Core](https://www.microsoft.com/net/core) 1.1 is installed following the steps published [here](https://www.microsoft.com/net/core#macos).  
+ASP.NET Core is a significant redesign of ASP.NET. It is new open-source and cross-platform framework for building modern cloud based internet connected applications. You can read more about ASP.NET Core [here](https://docs.microsoft.com/en-us/aspnet/core/).
 
 ## Benchmarks
 I decided to test each language by using the standard/built-in HTTP library, relying on external dependencies only when mandatory (Rust).
@@ -311,3 +317,12 @@ Memory consumption and resiliency are also very good.
 
 ##### Concurrency and parallelism
 As expected Crystal does not supports parallelism yet.
+
+### ASP.NET Core Setup
+The project is inspired by the [ASP.NET Benchmarks](https://github.com/aspnet/benchmarks), used on the [Tech Empower Benchmarks](https://www.techempower.com/benchmarks/)
+
+##### Bootstrap
+```
+> dotnet restore
+> dotnet run -c Release
+```
