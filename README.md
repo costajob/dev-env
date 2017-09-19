@@ -58,7 +58,7 @@ I chose to test the following languages:
 
 ### Ruby
 [Ruby](https://www.ruby-lang.org/en/) 2.4 is installed via [rbenv](https://github.com/rbenv/rbenv).  
-Ruby is a scripting language focused on simplicity and productivity, inspired by SmallTalk.  
+Ruby is a scripting language focused on simplicity and productivity, inspired by Lisp, with elements of Perl & Smalltalk.
 Ruby is a purely object oriented language but it also supports functional and imperative paradigms. I tested Ruby MRI implementation, offering concurrency via threads and parallelism via pre-forking.
 
 ### Python
